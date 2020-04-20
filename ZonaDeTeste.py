@@ -25,6 +25,7 @@ o codigo - publico
 
 
 import os
+os.system('clear') or None
 
 
 esporte = input('Você pratica esporte:  ')
@@ -32,6 +33,6 @@ if esporte == "sim":
     definicao = input('Qual o seu esporte: ')
     if definicao == "corrida":
         distancia = float(input('Qual a distancia (KM) você pecorre: '))
-    elif tempo = float(input('tempo você leva pra precorrer' + distancia + 'KM': )):
+        tempo = float(input('tempo você leva pra precorrer: '))
 else:
     print('Segundo a União de Saude, informa que é necessario um exercico em sua vida')

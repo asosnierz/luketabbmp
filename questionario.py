@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # Vermelho e branco -> ('\033[0;30;41m'+' o texto'+'\033[0;0m] ])
 
+import os
+os.system('clear') or None
 
 altura0 = 1.73
 print ('\033[0;30;43m'+'Seja bem-vindo, precisamos coletar Algumas informações'+'\033[0;0m')
@@ -21,6 +23,6 @@ if esporte == "sim":
     definicao = input('Qual o seu esporte: ')
     if definicao == "corrida":
         distancia = float(input('Qual a distancia (KM) você pecorre: '))
-        tempo = float(input('tempo você leva pra precorrer' + distancia + 'KM': ))
+        tempo = float(input('tempo você leva pra precorrer: '))
 else:
-    print('Segundo a União de Saude, informa que é necessario um exercico em sua vida')
+    print('O Conselho Nacional de Saúde, Adverte: informa que é necessario um exercico em sua vida')
