@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Vermelho e branco -> ('\033[0;30;41m'+' o texto'+'\033[0;0m] ])
+
 
 '''
 Entrada
@@ -23,16 +23,34 @@ Criar um repositorio no git
 o codigo - publico
 '''
 
-
+import sys
 import os
 os.system('clear') or None
 
+#------------------------- comece abaixo -------------------
 
-esporte = input('Você pratica esporte:  ')
-if esporte == "sim":
-    definicao = input('Qual o seu esporte: ')
-    if definicao == "corrida":
+esporte = raw_input('Você pratica esporte:  ')
+if esporte.lower() == "sim":
+    esporte1 = input('Seu esporte precisa percorrer distancia? ')
+    if esporte.lower() == "sim":
+        definicao = input('Qual o seu esporte: ')
+    if definicao.lower() == "corrida":
         distancia = float(input('Qual a distancia (KM) você pecorre: '))
-        tempo = float(input('tempo você leva pra precorrer: '))
+        tempo = float(input('Qual o tempo que você leva em media pra precorrer: '))
+        media = distancia / tempo
+        print(media)
+    elif definicao.lower() == "bicileta":
+        distancia = float(input('Qual a distancia (KM) você pecorre: '))
+        tempo = float(input('Qual o tempo que você leva em media pra precorrer: '))
+        media = distancia // tempo
+        print(media)
+    else:
+        print('É um Otimo esporte!')
 else:
-    print('Segundo a União de Saude, informa que é necessario um exercico em sua vida')
+    print ('\033[0;30;47m'+'O Conselho Nacional de Saúde, Adverte: Sedentarismo, pode matar! o ideal é pelo menos praticar um esporte do seu gosto ou praticar uma caminhada leve passos curtos por 30 minutos'+'\033[0;0m')
+
+
+
+
+
+
